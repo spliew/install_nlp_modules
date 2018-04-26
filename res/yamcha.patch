@@ -1,0 +1,22 @@
+diff -u -r ../yamcha-0.33.org/libexec/mkdarts.cpp ./libexec/mkdarts.cpp
+--- ../yamcha-0.33.org/libexec/mkdarts.cpp	2018-04-26 00:14:35.047738475 +0900
++++ ./libexec/mkdarts.cpp	2018-04-26 00:17:40.127746175 +0900
+@@ -28,6 +28,7 @@
+ #include <string>
+ #include <vector>
+ #include "darts.h"
++#include <cstdlib>
+ 
+ using namespace std;
+ 
+diff -u -r ../yamcha-0.33.org/src/common.h ./src/common.h
+--- ../yamcha-0.33.org/src/common.h	2018-04-26 00:16:14.755742623 +0900
++++ ./src/common.h	2018-04-26 00:15:32.771740876 +0900
+@@ -51,6 +51,7 @@
+ #include <vector>
+ #include <string>
+ #include <stdexcept>
++#include <string.h>
+ 
+ namespace YamCha {
+ 
