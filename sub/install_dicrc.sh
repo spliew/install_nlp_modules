@@ -1,4 +1,5 @@
 #!/usr/bin/env zsh
+set -eu
 
 INSTALL_DIR=$1
 DICRC=./res/mecab_dicrc.txt

@@ -6,10 +6,12 @@ BUILD_DIR=./build
 if [ "$INSTALL_DIR" = "" ]; then
     INSTALL_DIR=$HOME/.local
 fi
-mkdir -p $BUILD_DIR 1>/dev/null 2>/dev/null
+if [[ ! -e $BUILD_DIR ]]; then
+    mkdir -p $BUILD_DIR
+fi
 
 source $SCRIPTS/set_envs.sh $INSTALL_DIR
-pushd ./build/cabocha-0.69/python
-python setup.py build
+pushd $BUILD_DIR/cabocha-0.69/python
+python setup.py $BUILD_DIR
 python setup.py install
 popd
