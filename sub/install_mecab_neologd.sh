@@ -24,7 +24,7 @@ pushd $BUILD_DIR
     pushd mecab-ipadic-neologd
         mkdir ./build
         cp ../../res/mecab-ipadic-2.7.0-20070801.tar.gz ./build
-        if [[ ! "$INSTALL_DIR/lib/mecab/dic/mecab-ipadic-neologd/" ]]; then
+        if [ ! -e "$INSTALL_DIR/lib/mecab/dic/mecab-ipadic-neologd/" ]; then
             mkdir -p $INSTALL_DIR/lib/mecab/dic/mecab-ipadic-neologd/
         fi
         echo "yes" | ./bin/install-mecab-ipadic-neologd -p $INSTALL_DIR/lib/mecab/dic/mecab-ipadic-neologd/ -n
